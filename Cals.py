@@ -26,6 +26,12 @@ def mul(num1, num2):
 def div(num3, num2):
     result = num3/num2
     return jsonify(result=result)
+
+##Remainder
+@app.route('/div/<float:num1>/<float:num2>', methods=['GET'])
+def div(num3, num2):
+    result = num3%num2
+    return jsonify(result=result)
  
 if __name__ == '__main__':
     app.run(debug=True)
