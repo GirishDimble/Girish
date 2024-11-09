@@ -3,7 +3,7 @@ from flask import Flask,request, jsonify
 app = Flask(__name__)
 # Route for addition that takes num1 and num2 directly in the route
 
-##Addition 
+##Addition of two numbers 
 @app.route('/add/<int:num1>/<int:num2>', methods=['GET'])
 def add(num1, num2):
     result = num1 + num2
@@ -23,8 +23,8 @@ def mul(num1, num2):
 
 ##Devision
 @app.route('/div/<float:num1>/<float:num2>', methods=['GET'])
-def div(num1, num2):
-    result = num1/num2
+def div(num3, num2):
+    result = num3/num2
     return jsonify(result=result)
  
 if __name__ == '__main__':
