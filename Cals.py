@@ -21,20 +21,18 @@ def mul(num1, num2):
     result = num1 * num2
     return jsonify(result=result)
 
-##Power
-@app.route('/div/<float:num1>/<float:num2>', methods=['GET'])
-def div(num3, num2):
-    result = num3**num2
-    return jsonify(result=result)
-
 ##Devision
 @app.route('/div/<float:num1>/<float:num2>', methods=['GET'])
 def div(num3, num2):
     result = num3/num2
     return jsonify(result=result)
-
+##remainder
+@app.route('/remainder/<float:num1>/<float:num2>', methods=['GET'])
+def remainder(num3, num2):
+    result = num3**num2
+    return jsonify(result=result)
 ##Power
-@app.route('/div/<float:num1>/<float:num2>', methods=['GET'])
+@app.route('/power/<float:num1>/<float:num2>', methods=['GET'])
 def div(num3, num2):
     result = num3**num2
     return jsonify(result=result)
